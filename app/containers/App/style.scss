@@ -1,8 +1,30 @@
+// app-wide colors
+$amethyst: #702082;
+
 .app-wrapper {
+  border-top: 5px solid $amethyst;
   max-width: calc(768px + 16px * 2);
   margin: 0 auto;
   display: flex;
   min-height: 100%;
   padding: 0 16px;
   flex-direction: column;
+
+  button {
+    border: none;
+    border-radius: 5px;
+    padding: 5px;
+    margin: auto 5px;
+
+    &.main-button {
+      background: $amethyst;
+      color: white;
+    }
+
+    &.secondary-button {
+      border: solid 2px $amethyst;
+      color: $amethyst;
+      background: white;
+    }
+  }
 }

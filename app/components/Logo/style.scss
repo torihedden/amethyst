@@ -1,0 +1,11 @@
+@import './app/containers/App/style.scss';
+
+.logo {
+    width: 200px;
+    display: inline-block;
+
+    svg {
+        fill: $amethyst;
+        width: 100%;
+    }
+}

@@ -1,0 +1,11 @@
+@import './app/containers/App/style.scss';
+
+.card {
+    border: solid 1px $amethyst;
+    border-top: solid 5px $amethyst;
+    display: flex;
+
+    .card-image {
+        margin-right: 15px;
+    }
+}

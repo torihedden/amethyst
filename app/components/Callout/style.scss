@@ -1,0 +1,7 @@
+@import './app/containers/App/style.scss';
+
+.callout  {
+    border-left: solid 5px $amethyst;
+    background-color: lighten($amethyst, 60%);
+    padding: 15px;
+}

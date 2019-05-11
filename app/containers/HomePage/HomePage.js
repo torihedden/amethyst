@@ -7,7 +7,7 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import { Helmet } from 'react-helmet';
-import ReposList from 'components/ReposList';
+import Logo from '../../components/Logo/Logo';
 import './style.scss';
 
 export default class HomePage extends React.PureComponent { // eslint-disable-line react/prefer-stateless-function
@@ -34,32 +34,16 @@ export default class HomePage extends React.PureComponent { // eslint-disable-li
     return (
       <article>
         <Helmet>
-          <title>Home Page</title>
+          <title>Amethyst</title>
           <meta name="description" content="A React.js Boilerplate application homepage" />
         </Helmet>
         <div className="home-page">
           <section className="centered">
-            <h2>Start your next react project in seconds</h2>
+            <Logo />
+            <h1>Amethyst</h1>
             <p>
-              A minimal <i>React-Redux</i> boilerplate with all the best practices
+              A collection of useful <i>React-Redux</i> components
             </p>
-          </section>
-          <section>
-            <h2>Try me!</h2>
-            <form onSubmit={onSubmitForm}>
-              <label htmlFor="username">
-                Show Github repositories by
-                <span className="at-prefix">@</span>
-                <input
-                  id="username"
-                  type="text"
-                  placeholder="flexdinesh"
-                  value={username}
-                  onChange={onChangeUsername}
-                />
-              </label>
-            </form>
-            <ReposList {...reposListProps} />
           </section>
         </div>
       </article>
@@ -70,7 +54,6 @@ export default class HomePage extends React.PureComponent { // eslint-disable-li
 HomePage.propTypes = {
   loading: PropTypes.bool,
   error: PropTypes.oneOfType([PropTypes.object, PropTypes.bool]),
-  repos: PropTypes.oneOfType([PropTypes.array, PropTypes.bool]),
   onSubmitForm: PropTypes.func,
   username: PropTypes.string,
   onChangeUsername: PropTypes.func
